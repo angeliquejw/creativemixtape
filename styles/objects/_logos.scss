@@ -4,6 +4,7 @@
     //    background: url('/img/logo.png') no-repeat;
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: contain;
     @include size(100% 150px);
     @media only screen and (min-width: 414px) {
         height: 180px;
@@ -16,6 +17,9 @@
     }
     @media only screen and (min-width:768px) {
         height: 300px;
+    }
+    @media only screen and (min-width: 768px) and (max-height:800px) {
+        margin-top: 60px;
     }
     @media only screen and (min-width:920px) {
         height: 355px;
