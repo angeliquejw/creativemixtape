@@ -1,0 +1,33 @@
+.modal {
+    .js-modal-state {
+        display: none;
+    }
+    .modalMask {
+        @include position(fixed, 0 0 0 0);
+        background-color: rgba(black, 0.85);
+        opacity: 0;
+        @include transition(opacity 0.25s ease);
+        visibility: hidden;
+        //see zindex
+    }
+    .modalInner {
+        margin: auto;
+        position: relative;
+        @include size(95vw 100vh);
+    }
+    .modalContent {
+        margin: auto;
+        overflow: auto;
+        @include transition(opacity 0.25s ease);
+        max-height: 90vh;
+        max-width: 680px;
+    }
+    .js-modal-state:checked+.modalMask {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal-is-open {
+    overflow: hidden;
+}

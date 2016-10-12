@@ -1,0 +1,190 @@
+/*! Based on sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+:before,
+:after {
+    box-sizing: inherit;
+}
+
+* {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+::before,
+ ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    padding-left: 0;
+    &,
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    background-color: transparent;
+    /* IE 10 */
+}
+
+audio:not([controls]) {
+    display: none;
+    /* Chrome 44-, iOS 8+, Safari 9+ */
+    height: 0;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    /* IE 9- */
+}
+
+button {
+    -webkit-appearance: button;
+    /* iOS 8+ */
+}
+
+details {
+    display: block;
+    /* Edge 12+, Firefox 40+, IE 11-, Windows Phone 8.1+ */
+}
+
+html {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* Edge 12+, IE 11- */
+    overflow-y: scroll;
+    /* All browsers without overlaying scrollbars */
+    -webkit-text-size-adjust: 100%;
+    /* iOS 8+ */
+}
+
+input {
+    -webkit-border-radius: 0;
+    /* iOS 8+ */
+    &[type="button"],
+    &[type="reset"],
+    &[type="submit"] {
+        -webkit-appearance: button;
+        /* iOS 8+ */
+    }
+    &[type="number"] {
+        width: auto;
+        /* Firefox 36+ */
+    }
+    &[type="search"] {
+        -webkit-appearance: textfield;
+        /* Chrome 45+, Safari 9+ */
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-decoration {
+            -webkit-appearance: none;
+            /* Chrome 45+, Safari 9+ */
+        }
+    }
+}
+
+main {
+    display: block;
+    /* Android 4.3-, IE 11-, Windows Phone 8.1+ */
+}
+
+pre {
+    overflow: auto;
+    /* IE 11- */
+}
+
+progress {
+    display: inline-block;
+    /* IE 11-, Windows Phone 8.1+ */
+}
+
+summary {
+    display: block;
+    /* Firefox 40+, IE 11-, Windows Phone 8.1+ */
+}
+
+svg:not(:root) {
+    overflow: hidden;
+    /* IE 11- */
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+template {
+    display: none;
+    /* Android 4.3-, IE 11-, iOS 7-, Safari 7-, Windows Phone 8.1+ */
+}
+
+[hidden] {
+    display: none;
+    /* IE 10- */
+}
+
+[aria-controls] {
+    cursor: pointer;
+}
+
+[aria-disabled] {
+    cursor: default;
+}
+
+[hidden][aria-hidden="false"] {
+    clip: rect(0 0 0 0);
+    display: inherit;
+    position: absolute;
+    &:focus {
+        clip: auto;
+    }
+}
+
+
+/* specify the inherited color and font of form elements */
+
+button,
+input,
+select,
+textarea {
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+button,
+input,
+select {
+    overflow: visible;
+    /* IE 11- */
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+textarea {
+    overflow: auto;
+    /* Edge 12+, IE 11- */
+}

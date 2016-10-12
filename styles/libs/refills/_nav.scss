@@ -1,0 +1,32 @@
+.navigationWrapper {
+    $desktop: 760px;
+    $mobile: $desktop - 1;
+    position: relative;
+    // Mobile view
+    .navigationMenuBtn {
+        @media only screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+    ul.navigationMenu {
+        // overflow: visible;
+        // width: 100%;
+        @media only screen and (max-width: $mobile) {
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+    }
+    .navLink {
+        a {
+            display: block;
+        }
+        @media only screen and (max-width: $mobile) {
+            display: block;
+        }
+        @media only screen and (min-width: $desktop) {
+            background: transparent;
+        }
+    }
+}

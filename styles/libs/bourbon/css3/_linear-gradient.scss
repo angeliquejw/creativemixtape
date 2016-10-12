@@ -1,0 +1,55 @@
+@mixin linear-gradient($pos, $G1, $G2: null, $G3: null, $G4: null, $G5: null, $G6: null, $G7: null, $G8: null, $G9: null, $G10: null, $fallback: null) {
+	// Detect what type of value exists in $pos
+	$pos-type: type-of(nth($pos, 1));
+	$pos-spec: null;
+	$pos-degree: null;
+
+	// If $pos is missing from mixin, reassign vars and add default position
+	@if ($pos-type == color) or (nth($pos, 1) == "transparent") {
+		$G10: $G9;
+		$G9: $G8;
+		$G8: $G7;
+		$G7: $G6;
+		$G6: $G5;
+		$G5: $G4;
+		$G4: $G3;
+		$G3: $G2;
+		$G2: $G1;
+		$G1: $pos;
+		$pos: null;
+	}
+
+	@if $pos {
+		$positions: _linear-positions-parser($pos);
+		$pos-degree: nth($positions, 1);
+		$pos-spec: nth($positions, 2);
+	}
+
+	$gradients: $G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10;
+
+	// Purge null values from list
+	$full: ();
+
+	@each $item in $gradients {
+		@if ($item) {
+			$full: append($full, $item);
+		}
+	}
+
+	$full: zip($full);
+
+	// Set $G1 as the default fallback color
+	$fallback-color: nth($G1, 1);
+
+	// If $fallback is a color use that color as the fallback color
+	@if (type-of($fallback) == color) or ($fallback == "transparent") {
+		$fallback-color: $fallback;
+	}
+
+	background: $fallback-color; // Old browsers
+	background-image: -moz-linear-gradient($pos-degree $full); // FF3.6+
+	background-image: -ms-linear-gradient($pos-degree $full); // IE10+
+	background-image: -o-linear-gradient($pos-degree $full); // Opera 11.10+
+	background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome 10+
+	background-image: unquote("linear-gradient(#{$pos-spec}#{$full})"); // W3C
+}
