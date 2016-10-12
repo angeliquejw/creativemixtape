@@ -1,0 +1,27 @@
+.locationWrapper {
+    .iframeWrapper {
+        @include size(100% 360px);
+    }
+    .ctaWrapper {
+        padding: 36px 0 0;
+    }
+    @media only screen and (min-width:600px) {
+        @include display(flex);
+        .contentWrapper {
+            padding-top: 18px;
+            padding-bottom: 9px;
+            min-width: 300px;
+        }
+        .ctaWrapper {
+            padding-top: 12px;
+        }
+    }
+    @media only screen and (min-width:720px) {
+        .iframeWrapper {
+            max-width: 600px;
+        }
+        .iframeWrapper, .contentWrapper {
+            width: 50%;
+        }
+    }
+}

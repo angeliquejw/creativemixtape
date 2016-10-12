@@ -1,0 +1,31 @@
+.hero {
+    border-bottom: 4px solid black;
+    min-height: 100vh;
+    margin-bottom: -1px;
+    position: relative;
+    .contentWrapper {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        @media only screen and (min-width: 721px) {
+            left: 0;
+            right: 0;
+        }
+    }
+    .heading {
+        @include push-auto;
+        padding: 24px 0 36px;
+        max-width: 720px;
+        @media only screen and (min-width: 414px) {
+            padding-bottom: 60px;
+        }
+    }
+    @media only screen and (max-width:459px) {
+        .contentWrapper {
+            padding-top: 90px;
+        }
+    }
+    @media only screen and (min-height:1100px) {
+        min-height: 940px;
+    }
+}

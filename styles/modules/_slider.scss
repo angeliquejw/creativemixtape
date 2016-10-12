@@ -1,0 +1,81 @@
+$slideHeight: 360px;
+.sliderWrapper {
+    border-top: 1px solid $color-offblack;
+    border-bottom: 1px solid $color-offblack;
+    position: relative;
+    max-height: $slideHeight;
+}
+
+.sliderItem {
+    margin-left: 1px;
+    padding: 30px 60px 18px;
+    @include size(33.33vw $slideHeight);
+    &:nth-of-type(even) {
+        border-right: 1px solid $color-offblack;
+    }
+    &:nth-of-type(even),
+    &:last-of-type {
+        border-left: 1px solid $color-offblack;
+    }
+    @media only screen and (min-width:600px) {
+        padding-right: 42px;
+        padding-left: 42px;
+    }
+}
+
+@media only screen and (min-width:414px) and (max-width:599px) {
+    $slideHeight: 320px;
+    .sliderWrapper {
+        max-height: $slideHeight;
+    }
+    .sliderItem {
+        height: $slideHeight;
+    }
+}
+
+.slick-arrow {
+    @extend %isLink;
+    //    padding: 12px 24px 12px 18px;
+    @include rem(font-size, 0px);
+    position: absolute;
+    top: 50%;
+    &:before {
+        @include pseudo;
+        background-color: white;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 20px 40px;
+        @include transition(all 0.5s ease);
+        top: 50%;
+        @include size(48px 54px);
+        //see z-index;
+    }
+}
+
+.slick-prev {
+    left: -25px;
+    left: -30px;
+    &:before {
+        background-image: url($svg-arrow-left);
+        left: 30px;
+    }
+    @include hover-state {
+        &:before {
+            background-image: url($svg-arrow-left-hover);
+        }
+    }
+}
+
+.slick-next {
+    right: -25px;
+    right: -30px;
+    &:before {
+        background-image: url($svg-arrow-right);
+        right: 30px;
+    }
+    @include hover-state {
+        &:before {
+            background-image: url($svg-arrow-right-hover);
+        }
+    }
+}

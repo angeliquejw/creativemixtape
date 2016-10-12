@@ -1,0 +1,24 @@
+@import 'libs/bourbon/bourbon',
+'libs/sanitize',
+'libs/slick';
+// PALETTE
+$color-offwhite: #F2F2F2;
+$color-offblack: #444;
+$color-hotpink: #FD56A1;
+$color-raspberry: #B10F6B;
+$color-pink: #D65CB8;
+$color-aqua: #00E0CE;
+$color-green: #7FB440;
+$color-hunter: #295652;
+$color-purple: #743D9A;
+$color-lav: #9064AE;
+// WEBFONTS
+$font-base: open_sans,
+sans-serif;
+$font-heading: phosphatesolid,
+sans-serif;
+$font-display: filter_cfthin,
+sans-serif;
+$font-script: imogen_agnesregular;
+//SVGS
+@import 'svg';

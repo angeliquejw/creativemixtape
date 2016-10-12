@@ -1,0 +1,24 @@
+@import 'libs/refills/modal',
+'libs/refills/nav';
+%isLink,
+.isLink {
+    cursor: pointer;
+}
+
+main {
+    //    margin-top: 60px;
+    position: relative;
+}
+
+section {
+    position: relative;
+    header {
+        margin-bottom: 90px;
+        position: relative;
+        @media only screen and (min-width: 640px) {
+            margin-bottom: 0;
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+    }
+}

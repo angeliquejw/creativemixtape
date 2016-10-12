@@ -1,0 +1,42 @@
+button {
+    @include appearance(none);
+    border: none;
+}
+
+.btn {
+    display: block;
+    @include push-auto;
+    text-align: center;
+    text-decoration: none;
+    .twitterFeed & {
+        color: rgba($color-offblack, 0.5);
+        margin-top: 12px;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        max-width: 260px;
+        span {
+            font-family: $font-script;
+            @include rem(font-size, 60px);
+            text-transform: none;
+        }
+        @include hover-state {
+            color: $color-hotpink;
+        }
+    }
+}
+
+.btnCTA {
+    background: $color-aqua;
+    border: 2px solid $color-hotpink;
+    box-shadow: 0 0 9px 3px rgba($color-hotpink, 0.65);
+    color: $color-hotpink;
+    padding: 24px 30px;
+    padding: 12px 30px;
+    @include transition(all 0.5s ease);
+    @include hover-state {
+        box-shadow: 0 0 12px 3px rgba($color-hotpink, 0.9);
+    }
+    @media only screen and (min-width:414px) {
+        max-width: 240px;
+    }
+}

@@ -1,0 +1,32 @@
+#sponsors {
+    display: none; //temp
+    p {
+        margin-top: 54px;
+    }
+    aside {
+        margin-top: 60px;
+    }
+    .iframeWrapper {
+        overflow-y: auto;
+        max-height: 100vh;
+        iframe {
+            display: block!important;
+            @include push-auto;
+        }
+    }
+    @media only screen and (min-width:600px) {
+        .flexContainer {
+            @include display(flex);
+        }
+        .contentWrapper,
+        .twitterFeed {
+            @include flex(1 0 auto);
+            width: 50%;
+        }
+        .twitterFeed,
+        .iframeWrapper {
+            min-width: 300px;
+            max-width: 360px;
+        }
+    }
+}

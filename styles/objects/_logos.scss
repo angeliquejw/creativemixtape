@@ -1,0 +1,62 @@
+.siteLogo {
+    @include hide-text;
+    @include retina-image('/img/logo', contain, $retina-suffix: '@2X');
+    //    background: url('/img/logo.png') no-repeat;
+    background-position: top center;
+    background-repeat: no-repeat;
+    @include size(100% 150px);
+    @media only screen and (min-width: 414px) {
+        height: 180px;
+    }
+    @media only screen and (min-width:560px) {
+        height: 220px;
+    }
+    @media only screen and (min-width:620px) {
+        height: 260px;
+    }
+    @media only screen and (min-width:768px) {
+        height: 300px;
+    }
+    @media only screen and (min-width:920px) {
+        height: 355px;
+    }
+    @media only screen and (min-width:1024px) {
+        height: 425px;
+    }
+}
+
+.groupLogo {
+    a {
+        @include hide-text;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        opacity: 0.9;
+        @include size(100% 54px);
+        @include hover-state {
+            opacity: 1;
+        }
+        #AIGA & {
+            background-image: url('/img/logo-aiga.png');
+        }
+        #AAF & {
+            background-image: url('/img/logo-aaf.png');
+        }
+        #AMA & {
+            background-image: url('/img/logo-ama.png');
+        }
+        #BCreatives & {
+            background-image: url('/img/logo-bmorecreatives.png');
+        }
+        #GDI & {
+            background-image: url('/img/logo-gdi.png');
+        }
+        #PCB & {
+            background-image: url('/img/logo-pcb.png');
+        }
+        #SHAG & {
+            background-image: url('/img/logo-shag.png');
+        }
+    }
+}

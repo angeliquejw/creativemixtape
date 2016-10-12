@@ -1,0 +1,14 @@
+.siteHeader {
+    // prevents flickering when scrolling over iframe
+    @include backface-visibility(hidden);
+    @include size(100% 42px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    //see z-index
+    @media only screen and (min-width: 760px) {
+        height: 80px;
+        padding: 0 48px;
+    }
+}

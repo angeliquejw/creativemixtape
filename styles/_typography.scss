@@ -1,0 +1,169 @@
+@import 'webfonts';
+body {
+    font-family: $font-base;
+}
+
+.heading {
+    #about &,
+    .locationWrapper &,
+    #gang .contentWrapper &,
+    #sponsors .contentWrapper & {
+        font-family: $font-script;
+        letter-spacing: 1px;
+        line-height: 1;
+        margin-bottom: 14px;
+        @include transform(rotate(-3deg));
+    }
+    #gang .contentWrapper &,
+    #sponsors .contentWrapper & {
+        @include rem(font-size, 66px);
+    }
+    #about &,
+    .locationWrapper & {
+        @include rem(font-size, 60px);
+    }
+    .hero & {
+        font-family: $font-display;
+        @include rem(font-size, 24px);
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        @media only screen and (min-width: 500px) {
+            @include rem(font-size, 30px);
+        }
+    }
+    section header &,
+    .modalContent & {
+        font-family: $font-heading;
+        line-height: 80px;
+        text-align: center;
+        text-transform: uppercase;
+        @media only screen and (min-width: 414px) {
+            @include rem(font-size, 20px);
+        }
+    }
+    @media only screen and (min-width: 640px) {
+        #gang & {
+            text-align: right
+        }
+        #sponsors header & {
+            text-align: left
+        }
+    }
+}
+
+.btnCTA,
+.headingAccent {
+    font-family: $font-script;
+    letter-spacing: 1px
+}
+
+.btnCTA {
+    @include rem(font-size, 54px);
+}
+
+.headingAccent {
+    @include rem(font-size, 42px);
+    text-align: center
+}
+
+.siteHeader {
+    a {
+        font-family: $font-heading;
+        line-height: 42px;
+        text-decoration: none;
+        text-transform: uppercase;
+        @media only screen and (min-width: 760px) {
+            @include rem(font-size, 22px);
+            line-height: 80px
+        }
+    }
+    .accentCTA {
+        text-align: center;
+        @media only screen and (max-width: 639px) {
+            @include rem(font-size, 18px);
+        }
+        @media only screen and (min-width: 640px) {
+            @include rem(font-size, 22px);
+        }
+    }
+}
+
+p {
+    #about & {
+        max-width: 640px
+    }
+    .locationWrapper .contentWrapper & {
+        font-family: $font-heading;
+        @include rem(font-size, 24px);
+        text-transform: uppercase
+    }
+}
+
+#groups {
+    text-align: center;
+    .socialLinks li {
+        @include rem(font-size, 36px);
+    }
+}
+
+#gang {
+    li {
+        text-align: center
+    }
+    .contentWrapper span {
+        font-family: $font-display;
+        @include rem(font-size, 72px);
+        line-height: 160px;
+        text-align: center;
+        &.spacer {
+            @include rem(font-size, 120px);
+        }
+        @media only screen and (min-width: 480px) {
+            line-height: 140px
+        }
+    }
+    p {
+        @include rem(font-size, 14px);
+        &:first-of-type {
+            font-weight: bold
+        }
+    }
+}
+
+#sponsors {
+    .contentWrapper {
+        p {
+            font-family: $font-heading;
+            @include rem(font-size, 20px);
+            text-align: center;
+            text-transform: uppercase
+        }
+        a {
+            text-decoration: none;
+            @include hover-state {
+                text-decoration: underline
+            }
+        }
+    }
+}
+
+.siteFooter {
+    p {
+        font-family: $font-heading
+    }
+    li {
+        @include rem(font-size, 14px);
+        font-weight: bold;
+        text-transform: uppercase
+    }
+    a {
+        text-decoration: none
+    }
+}
+
+.modalClose {
+    font-family: $font-display;
+    @include rem(font-size, 60px);
+    line-height: 1
+}

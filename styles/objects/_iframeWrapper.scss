@@ -1,0 +1,15 @@
+.iframeWrapper {
+    overflow: hidden;
+    max-width: 100%;
+    iframe {
+        border: none;
+        position: relative; //IE needs a position other than static
+        @include size(100%);
+        .locationWrapper & {
+            pointer-events: none;
+            &.is-clicked {
+                pointer-events: auto;
+            }
+        }
+    }
+}

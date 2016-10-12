@@ -1,0 +1,32 @@
+#about {
+    &.contentWrapper {
+        @media only screen and (min-width: 600px) {
+            padding-right: 90px;
+            padding-left: 90px;
+        }
+        @media only screen and (min-width:920px) {
+            padding-right: 120px;
+            padding-left: 120px;
+        }
+    }
+    @media only screen and (min-width:760px) {
+        position: relative;
+        &:after {
+            background-image: url($svg-trialt);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: '';
+            opacity: 0.8;
+            position: absolute;
+            top: 0;
+            right: -120px;
+            @include size(294px 213px);
+        }
+    }
+    @media only screen and (min-width:920px) {
+        &:after {
+            right: -100px;
+        }
+    }
+}
