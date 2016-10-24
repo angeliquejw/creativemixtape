@@ -46,8 +46,6 @@ body {
     background: $color-offwhite;
 }
 
-main {}
-
 section {
     header {
         background: $color-aqua;
@@ -58,14 +56,14 @@ section {
     color: white;
 }
 
-.intro {}
-
 .hero {
     background: url(/img/bk.hero.jpg) bottom center no-repeat;
     background-size: cover;
-    .heading,
-    .hashtagWrapper {
+    .heading {
         color: $color-green;
+    }
+    .hashtagWrapper {
+        color: $color-hotpink;
     }
 }
 

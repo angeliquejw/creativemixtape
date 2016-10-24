@@ -53,18 +53,22 @@ body {
 }
 
 .btnCTA,
-.headingAccent {
+.headingAccent, .hashtagWrapper {
     font-family: $font-script;
     letter-spacing: 1px
 }
 
-.btnCTA {
+.btnCTA, .hashtagWrapper {
     @include rem(font-size, 54px);
 }
 
 .headingAccent {
     @include rem(font-size, 42px);
     text-align: center
+}
+
+.hashtagWrapper {
+    text-align: center;
 }
 
 .siteHeader {
