@@ -91,6 +91,7 @@ body {
 
 p {
     #about & {
+        margin-bottom: 12px;
         max-width: 640px
     }
     .locationWrapper .contentWrapper & {
@@ -134,10 +135,12 @@ p {
 #sponsors {
     .contentWrapper {
         p {
-            font-family: $font-heading;
-            @include rem(font-size, 20px);
-            text-align: center;
-            text-transform: uppercase
+            &.strong {
+                font-family: $font-heading;
+                @include rem(font-size, 20px);
+                text-align: center;
+                text-transform: uppercase;
+            }
         }
         a {
             text-decoration: none;

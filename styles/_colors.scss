@@ -3,6 +3,15 @@ body {
     color: $color-hunter;
 }
 
+::-moz-selection {
+    background: black;
+    color: $color-aqua;
+}
+::selection {
+    background: black;
+    color: $color-aqua;
+}
+
 .siteHeader,
 .siteFooter {
     background: $color-hotpink url(/img/bk.texture.nav.png);
@@ -54,7 +63,8 @@ section {
 .hero {
     background: url(/img/bk.hero.jpg) bottom center no-repeat;
     background-size: cover;
-    .heading {
+    .heading,
+    .hashtagWrapper {
         color: $color-green;
     }
 }
@@ -105,7 +115,7 @@ section {
         a {
             color: rgba($color-offblack, 0.6);
             @include hover-state {
-                color: $color-hotpink;
+                color: $color-pink;
             }
         }
     }

@@ -17,13 +17,22 @@
     .heading {
         @include push-auto;
         padding: 24px 0 36px;
-        max-width: 720px;
+        max-width: 580px;
         @media only screen and (min-width: 414px) {
             padding-bottom: 60px;
         }
     }
     .btnCTA {
         margin-bottom: 90px;
+    }
+    .hashtagWrapper {
+        letter-spacing: 1px;
+        position: absolute;
+        right: 0;
+        bottom: 90px;
+        left: 0;
+        text-align: center;
+        text-transform: uppercase;
     }
     @media only screen and (max-width:459px) {
         .contentWrapper {
