@@ -53,12 +53,14 @@ body {
 }
 
 .btnCTA,
-.headingAccent, .hashtagWrapper {
+.headingAccent,
+.hashtagWrapper {
     font-family: $font-script;
     letter-spacing: 1px
 }
 
-.btnCTA, .hashtagWrapper {
+.btnCTA,
+.hashtagWrapper {
     @include rem(font-size, 54px);
 }
 
@@ -102,6 +104,31 @@ p {
         font-family: $font-heading;
         @include rem(font-size, 24px);
         text-transform: uppercase
+    }
+}
+
+.locationWrapper .contentWrapper em {
+    font-family: $font-base;
+    @include rem(font-size, 16px);
+    font-style: normal;
+    line-height: 24px;
+    text-transform: none;
+    @media only screen and (min-width: 380px) {
+        @include rem(font-size, 20px);
+    }
+    @media only screen and (min-width: 600px) and (max-width:739px) {
+        @include rem(font-size, 16px);
+    }
+    @media only screen and (max-width: 1059px) {
+        display: block;
+        &:before {
+            content: '⇡ ';
+        }
+    }
+    @media only screen and (min-width:1060px) {
+        &:before {
+            content: '⇠ ';
+        }
     }
 }
 
