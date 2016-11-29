@@ -1,8 +1,13 @@
 @import 'libs/refills/modal',
-'libs/refills/nav';
+'libs/refills/nav', 'libs/side-lined';
 %isLink,
 .isLink {
     cursor: pointer;
+}
+
+.isHidden {
+    display: none;
+    visibility: hidden;
 }
 
 main {

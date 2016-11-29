@@ -13,7 +13,7 @@ body {
 }
 
 .siteHeader,
-.siteFooter {
+.siteFooter, section footer {
     background: $color-hotpink url(/img/bk.texture.nav.png);
     background-size: contain;
 }
@@ -47,8 +47,8 @@ body {
 }
 
 section {
-    header {
-        background: $color-aqua;
+    header, footer {
+        background-color: $color-aqua;
     }
 }
 
@@ -124,9 +124,19 @@ section {
         .heading {
             color: $color-purple;
         }
-        p,
-        a {
-            color: $color-lav;
+        // p,
+        // a {
+        //     color: $color-lav;
+        // }
+        .sponsors1 {
+            color: $color-hotpink;
+
+        }
+        .sponsors2, .sponsors3 {
+            color:rgba($color-offblack, 0.4);
+            span {
+                @include scut-side-lined($color:rgba($color-offblack, 0.4), $space: 10px);
+            }                    
         }
     }
 }

@@ -4,22 +4,22 @@ body {
 }
 
 .heading {
-    #about &,
-    .locationWrapper &,
-    #gang .contentWrapper &,
-    #sponsors .contentWrapper & {
+    #about > &,
+    .locationWrapper > &,
+    #gang .contentWrapper > &,
+    #sponsors .contentWrapper > & {
         font-family: $font-script;
         letter-spacing: 1px;
         line-height: 1;
         margin-bottom: 14px;
         @include transform(rotate(-3deg));
     }
-    #gang .contentWrapper &,
-    #sponsors .contentWrapper & {
+    #gang .contentWrapper > &,
+    #sponsors .contentWrapper > & {
         @include rem(font-size, 66px);
     }
-    #about &,
-    .locationWrapper & {
+    #about > &,
+    .locationWrapper > & {
         @include rem(font-size, 60px);
     }
     .hero & {
@@ -32,7 +32,7 @@ body {
             @include rem(font-size, 30px);
         }
     }
-    section header &,
+    section header &, section footer &, 
     .modalContent & {
         font-family: $font-heading;
         line-height: 80px;
@@ -40,6 +40,11 @@ body {
         text-transform: uppercase;
         @media only screen and (min-width: 414px) {
             @include rem(font-size, 20px);
+        }
+    }
+    section footer & {
+        @media only screen and (max-width:359px) {
+            @include rem(font-size,15px);
         }
     }
     @media only screen and (min-width: 640px) {
@@ -165,18 +170,28 @@ p {
 
 #sponsors {
     .contentWrapper {
-        p {
-            &.strong {
-                font-family: $font-heading;
-                @include rem(font-size, 20px);
+        // p {
+        //     &.strong {
+        //         font-family: $font-heading;
+        //         @include rem(font-size, 20px);
+        //         text-align: center;
+        //         text-transform: uppercase;
+        //     }
+        // }
+        // a {
+        //     text-decoration: none;
+        //     @include hover-state {
+        //         text-decoration: underline
+        //     }
+        // }
+        ol, ul {
+            li {
                 text-align: center;
-                text-transform: uppercase;
             }
         }
-        a {
-            text-decoration: none;
-            @include hover-state {
-                text-decoration: underline
+        ol {
+            > li {
+                font-family: $font-heading;
             }
         }
     }
