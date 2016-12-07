@@ -7,13 +7,15 @@ body {
     background: black;
     color: $color-aqua;
 }
+
 ::selection {
     background: black;
     color: $color-aqua;
 }
 
 .siteHeader,
-.siteFooter, section footer {
+.siteFooter,
+section footer {
     background: $color-hotpink url(/img/bk.texture.nav.png);
     background-size: contain;
 }
@@ -47,7 +49,8 @@ body {
 }
 
 section {
-    header, footer {
+    header,
+    footer {
         background-color: $color-aqua;
     }
 }
@@ -113,7 +116,7 @@ section {
         a {
             color: rgba($color-offblack, 0.6);
             @include hover-state {
-                color: $color-pink;
+                color: $color-hotpink;
             }
         }
     }
@@ -130,13 +133,22 @@ section {
         // }
         .sponsors1 {
             color: $color-hotpink;
-
         }
-        .sponsors2, .sponsors3 {
-            color:rgba($color-offblack, 0.4);
+        .sponsors2,
+        .sponsors3,
+        .sponsors4 {
+            color: rgba($color-offblack, 0.4);
             span {
-                @include scut-side-lined($color:rgba($color-offblack, 0.4), $space: 10px);
-            }                    
+                @include scut-side-lined($color: rgba($color-offblack, 0.4), $space: 10px);
+            }
+        }
+        .sponsors4 {
+            a {
+                color: $color-offblack;
+                @include hover-state {
+                    color: $color-hotpink;
+                }
+            }
         }
     }
 }

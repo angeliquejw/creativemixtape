@@ -1,5 +1,43 @@
 ﻿@mixin hover-state {
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
         @content;
+    }
+}
+
+@include keyframes(hover-bob) {
+    0% {
+        @include transform(translateY(-8px));
+    }
+    50% {
+        @include transform(translateY(-4px));
+    }
+    100% {
+        @include transform(translateY(-8px));
+    }
+}
+
+@include keyframes(hover-bob-float) {
+    100% {
+        @include transform(translateY(-8px));
+    }
+}
+
+@mixin hover-bob {
+    @include transform(perspective(1px) translateZ(0));
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    // display: inline-block;
+    // vertical-align: middle;
+    &:hover,
+    &:focus,
+    &:active {
+        @include animation-name(hover-bob-float, hover-bob);
+        @include animation-duration(.3s, 1.5s);
+        @include animation-delay(0s, .3s);
+        @include animation-timing-function(ease-out, ease-in-out);
+        @include animation-iteration-count(1, infinite);
+        @include animation-fill-mode(forwards);
+        @include animation-direction(normal, alternate);
     }
 }
